@@ -47,4 +47,4 @@ Table format as shown below.
    ![alt text][comp]
    
 [code]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Source_Code.png "Source Code"
-[comp]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Component_Diagram.png "Component Diagram"
+[comp]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Component_Diagram_update.png "Component Diagram"
