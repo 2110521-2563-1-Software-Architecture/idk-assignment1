@@ -14,6 +14,8 @@ Things to be delivered:
    
 2. Source codes of 2 and 3.
    ![alt text][code]
+   ![alt text][code2]
+   ![alt text][code3]
 3. Compare how to call the methods based on gRPC and REST API side-by-side, e.g. in a Table format as shown below. 
 
     | Functions | gRPC | REST API |
@@ -54,5 +56,7 @@ Table format as shown below.
 
    ![alt text][comp]
    
-[code]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Source_Code.png "Source Code"
+[code]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Source_Code.png "Server"
+[code2]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/code_2.png "Client1"
+[code3]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/code_3.png "Client2"
 [comp]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Component_Diagram_update.png "Component Diagram"
