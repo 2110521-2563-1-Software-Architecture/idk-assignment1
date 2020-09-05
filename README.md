@@ -1,6 +1,14 @@
-## idk-assignment1
-### 	Assignment #1: gRPC and REST API implementation
-___
+# idk-assignment1
+## idk Team Members
+* 6030026021 Kritsana Khankaew
+* 6030033321 Kongtap Arunlakvilart
+* 6030038521 Kantorn Chitchuen
+* 6030478021 Melvin Macaranas
+* 6030482421 Yodsavee Lertthirathanaphong
+* 6031015221 David Tumcharoen
+
+## Assignment #1: gRPC and REST API implementation
+
 Things to be delivered:
 1. Screenshots of Swagger for your APIs in 2.
    
