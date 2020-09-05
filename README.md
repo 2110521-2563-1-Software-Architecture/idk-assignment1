@@ -13,9 +13,9 @@ Things to be delivered:
 1. Screenshots of Swagger for your APIs in 2.
    
 2. Source codes of 2 and 3.
-   Server side
+   * Server side
    ![alt text][code]
-   Client side
+   * Client side
    ![alt text][code2]
    ![alt text][code3]
 3. Compare how to call the methods based on gRPC and REST API side-by-side, e.g. in a Table format as shown below. 
