@@ -9,7 +9,7 @@ class Client {
         return res.data;
       });
     } catch (e) {
-      console.error("Cannot get all book");
+      console.error("Cannot get all book " + e.message);
     }
   }
 
@@ -17,16 +17,16 @@ class Client {
     try {
       return await axios.get(`${baseURL}/${bookId}`);
     } catch (e) {
-      console.error("Cannot get book");
+      console.error("Cannot get book " + e.message);
     }
   }
 
   async insertBook(book) {
     try {
-      await axios.put(`${baseURL}/insert`, book);
+      await axios.post(`${baseURL}/insert`, book);
       return "success";
     } catch (e) {
-      console.error("Cannot insert book");
+      console.error("Cannot insert book " + e.message);
     }
   }
 
@@ -35,7 +35,7 @@ class Client {
       await axios.delete(`${baseURL}/${bookId}`);
       return "success";
     } catch (e) {
-      console.error("Cannot delete book");
+      console.error("Cannot delete book " + e.message);
     }
   }
 }
@@ -52,13 +52,12 @@ async function start() {
       console.log(await client.getBookById(process.argv[3]));
       break;
     case "insert":
-      console.log(
-        await client.insertBook({
-          id: parseInt(process.argv[3]),
-          title: process.argv[4],
-          author: process.argv[5],
-        })
-      );
+      const book = {
+        id: parseInt(process.argv[3]),
+        title: process.argv[4],
+        author: process.argv[5],
+      };
+      console.log(await client.insertBook(book));
       break;
     case "delete":
       console.log(await client.deleteBook(process.argv[3]));
