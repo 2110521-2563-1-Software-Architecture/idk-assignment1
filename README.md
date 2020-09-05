@@ -22,10 +22,10 @@ Things to be delivered:
 
     | Functions | gRPC | REST API |
     |--|--|--|
-    | List books | client.list({}, function(error, books) {<br>&nbsp;&nbsp;printResponse(error, books);<br>}); | `axios.get('http://localhost:3000/books')`  |
-    | Insert books | client.insert(book, function(error, empty) {<br>&nbsp;&nbsp;printResponse(error, empty);<br>}); | `axios.post('http://localhost:3000/books', book)` |
-    | Get books | client.get({ id: parseInt(id) }, function(error, book) {<br>&nbsp;&nbsp;printResponse(error, book);<br>}); | ```axios.get(`http://localhost:3000/books/${id}`, book)``` |
-    | Delete books | client.delete({ id: parseInt(id) }, function(error, empty) {<br>&nbsp;&nbsp;printResponse(error, empty);<br>}); | ```axios.delete(`http://localhost:3000/books/${id}`)``` |
+    | List books | client.list({}, function(error, books) {<br>&nbsp;&nbsp;printResponse(error, books);<br>}); | `axios.get('http://localhost:3000/book/list')`  |
+    | Insert books | client.insert(book, function(error, empty) {<br>&nbsp;&nbsp;printResponse(error, empty);<br>}); | `axios.post('http://localhost:3000/book/insert', book)` |
+    | Get books | client.get({ id: parseInt(id) }, function(error, book) {<br>&nbsp;&nbsp;printResponse(error, book);<br>}); | ```axios.get(`http://localhost:3000/book/${bookId}`, book)``` |
+    | Delete books | client.delete({ id: parseInt(id) }, function(error, empty) {<br>&nbsp;&nbsp;printResponse(error, empty);<br>}); | ```axios.delete(`http://localhost:3000/book/${bookId}`)``` |
     | Watch books | client.watch({}) | - |
 4. What are the main differences between REST API and gRPC?
    - gRPC uses HTTP/2 which is much faster than HTTP/1.1 used in REST by default
@@ -49,10 +49,10 @@ Table format as shown below.
 
     | Functions | gRPC | REST API |
     |--|--|--|
-    | List books | listBooks(); |  listBooks(); |
-    | Insert books |insertBook(int id, str title, str author);  | insertBook(id,title, author); |
-    | Get books | getBook(int id); |  getBook(id);|
-    | Delete books | deleteBook(int id); | deleteBook(id); |
+    | List books | listBooks(); |  bookData.getBookList(); |
+    | Insert books |insertBook(int id, str title, str author);  | bookData.insertBook(req.body); |
+    | Get books | getBook(int id); |  bookData.getBookById(req.params.bookId) |
+    | Delete books | deleteBook(int id); | bookData.deleteBookById(req.params.bookId); |
     | Watch books | watchBooks(); | - |
 7. Draw a component diagram representing the book services with and without interfaces. 
 
