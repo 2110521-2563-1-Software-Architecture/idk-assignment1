@@ -40,6 +40,13 @@
                     "Books"
                 ],
                 "summary": "Get book in the system by its id",
+                "parameters": [
+                    {
+                        "name" : "id",
+                        "description" : "Book id",
+                        "required" : true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -56,10 +63,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Book is deleted",
-                        "schema": {
-                            "$ref": "#/definitions/Book"
-                        }
+                        "description": "Book is deleted"
                     }
                 }
             }
@@ -82,10 +86,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "New book is inserted",
-                        "schema": {
-                            "$ref": "#/definitions/Book"
-                        }
+                        "description": "New book is inserted"
                     }
                 }
             }
