@@ -43,6 +43,7 @@ Table format as shown below.
     | Delete books | deleteBook(int id); | deleteBook(id); |
     | Watch books | watchBooks(); | watchBooks(); |
 7. Draw a component diagram representing the book services with and without interfaces. 
+
    ![alt text][comp]
    
 [code]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Source_Code.png "Source Code"
