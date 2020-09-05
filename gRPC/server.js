@@ -6,6 +6,11 @@ var booksProto = grpc.load('books.proto');
 var books = [ 
     { id: 123, title: 'A Tale of Two Cities', author: 'Charles Dickens' }
   ];
+
+// add the events package
+var events = require('events');
+// add the bookStream global variable
+var bookStream = new events.EventEmitter();
   
 var server = new grpc.Server();
 server.addService(booksProto.books.BookService.service, {
@@ -15,6 +20,9 @@ server.addService(booksProto.books.BookService.service, {
     insert: function(call, callback) {
         var book = call.request;
         books.push(book);
+
+        bookStream.emit('new_book', book);
+        
         callback(null, {});
     },
     get: function(call, callback) {
@@ -36,6 +44,11 @@ server.addService(booksProto.books.BookService.service, {
         callback({
             code: grpc.status.NOT_FOUND,
             details: 'Not found'
+        });
+    },
+    watch: function(stream) {
+        bookStream.on('new_book', function(book){
+            stream.write(book);
         });
     }
 });
