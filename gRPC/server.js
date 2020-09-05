@@ -26,6 +26,18 @@ server.addService(booksProto.books.BookService.service, {
             details: 'Not found'
         });
     },
+    delete: function(call, callback) {
+        for (var i = 0; i < books.length; i++) {
+            if (books[i].id == call.request.id) {
+                books.splice(i, 1);
+                return callback(null, {});
+            }
+        }
+        callback({
+            code: grpc.status.NOT_FOUND,
+            details: 'Not found'
+        });
+    }
 });
 
 server.bind('0.0.0.0:50051',
