@@ -10,6 +10,8 @@ service BookService {
   rpc Get (BookIdRequest) returns (Book) {}
 
   rpc Delete (BookIdRequest) returns (Empty) {}
+
+  rpc Watch (Empty) returns (stream Book) {}
 }
 
 message Empty {} 
