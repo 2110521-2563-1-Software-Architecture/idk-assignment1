@@ -12,6 +12,10 @@
 Things to be delivered:
 1. Screenshots of Swagger for your APIs in 2.
    ![alt text][swagger]
+   ![alt text][swagger01]
+   ![alt text][swagger02]
+   ![alt text][swagger03]
+   ![alt text][swagger04]
 2. Source codes of 2 and 3.
    * Server side
    ![alt text][code]
@@ -63,3 +67,7 @@ Table format as shown below.
 [code3]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/code_3.png "Client2"
 [comp]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Component_Diagram_update.png "Component Diagram"
 [swagger]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Swagger.png "Swagger"
+[swagger01]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Swagger01.png "Swagger01"
+[swagger02]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Swagger02.png "Swagger02"
+[swagger03]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Swagger03.png "Swagger03"
+[swagger04]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Swagger04.png "Swagger04"
