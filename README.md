@@ -5,15 +5,15 @@ Things to be delivered:
 1. Screenshots of Swagger for your APIs in 2.
    
 2. Source codes of 2 and 3.
-   
+   ![alt text][code]
 3. Compare how to call the methods based on gRPC and REST API side-by-side, e.g. in a Table format as shown below. 
 
     | Functions | gRPC | REST API |
     |--|--|--|
-    | List books | client.list({}, function(error, books) {<br>&nbsp;&nbsp;printResponse(error, books);<br>}); | `axios.get('http://localhost:10000/books')`  |
-    | Insert books | client.insert(book, function(error, empty) {<br>&nbsp;&nbsp;printResponse(error, empty);<br>}); | `axios.post('http://localhost:10000/books', book)` |
-    | Get books | client.get({ id: parseInt(id) }, function(error, book) {<br>&nbsp;&nbsp;printResponse(error, book);<br>}); | ```axios.get(`http://localhost:1000/books/${id}`, book)``` |
-    | Delete books | client.delete({ id: parseInt(id) }, function(error, empty) {<br>&nbsp;&nbsp;printResponse(error, empty);<br>}); | ```axios.delete(`http://localhost:10000/books/${id}`)``` |
+    | List books | client.list({}, function(error, books) {<br>&nbsp;&nbsp;printResponse(error, books);<br>}); | `axios.get('http://localhost:3000/books')`  |
+    | Insert books | client.insert(book, function(error, empty) {<br>&nbsp;&nbsp;printResponse(error, empty);<br>}); | `axios.post('http://localhost:3000/books', book)` |
+    | Get books | client.get({ id: parseInt(id) }, function(error, book) {<br>&nbsp;&nbsp;printResponse(error, book);<br>}); | ```axios.get(`http://localhost:3000/books/${id}`, book)``` |
+    | Delete books | client.delete({ id: parseInt(id) }, function(error, empty) {<br>&nbsp;&nbsp;printResponse(error, empty);<br>}); | ```axios.delete(`http://localhost:3000/books/${id}`)``` |
     | Watch books | client.watch({}) | `socket.on("respond",function(msg))` |
 4. What are the main differences between REST API and gRPC?
    - gRPC uses HTTP/2 which is much faster than HTTP/1.1 used in REST by default
@@ -45,4 +45,5 @@ Table format as shown below.
 7. Draw a component diagram representing the book services with and without interfaces. 
    ![alt text][comp]
    
+[code]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Source_Code.png "Source Code"
 [comp]: https://raw.githubusercontent.com/2110521-2563-1-Software-Architecture/idk-assignment1/master/Component_Diagram.png "Component Diagram"
