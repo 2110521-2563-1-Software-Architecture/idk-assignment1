@@ -14,7 +14,7 @@ Things to be delivered:
     | Insert books | client.insert(book, function(error, empty) {<br>&nbsp;&nbsp;printResponse(error, empty);<br>}); | `axios.post('http://localhost:3000/books', book)` |
     | Get books | client.get({ id: parseInt(id) }, function(error, book) {<br>&nbsp;&nbsp;printResponse(error, book);<br>}); | ```axios.get(`http://localhost:3000/books/${id}`, book)``` |
     | Delete books | client.delete({ id: parseInt(id) }, function(error, empty) {<br>&nbsp;&nbsp;printResponse(error, empty);<br>}); | ```axios.delete(`http://localhost:3000/books/${id}`)``` |
-    | Watch books | client.watch({}) | `socket.on("respond",function(msg))` |
+    | Watch books | client.watch({}) | - |
 4. What are the main differences between REST API and gRPC?
    - gRPC uses HTTP/2 which is much faster than HTTP/1.1 used in REST by default
 
@@ -41,7 +41,7 @@ Table format as shown below.
     | Insert books |insertBook(int id, str title, str author);  | insertBook(id,title, author); |
     | Get books | getBook(int id); |  getBook(id);|
     | Delete books | deleteBook(int id); | deleteBook(id); |
-    | Watch books | watchBooks(); | watchBooks(); |
+    | Watch books | watchBooks(); | - |
 7. Draw a component diagram representing the book services with and without interfaces. 
 
    ![alt text][comp]
