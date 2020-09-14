@@ -4,7 +4,7 @@ import swaggerUi from 'swagger-ui-express';
 import swaggerDocument from './swagger.js';
 
 const app = express();
-const PORT = 1989;
+const PORT = 3000;
 
 import Book from "./Book.js";
 const bookData = new Book();
