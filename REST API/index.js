@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from './swagger.json'
+import swaggerDocument from './swagger.js';
 
 const app = express();
 const PORT = 3000;
